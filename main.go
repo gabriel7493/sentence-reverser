@@ -30,11 +30,13 @@ func ReverseSentence(sentence string, stringReverser func (string) string) (resu
 func sentenceProcessor() {
 	args := os.Args
 	length := len(args)
-	if length < 2 || length > 2 {
+	if length < 2 {
 		fmt.Println("You should provide a valid sentence to reverse")
-	} else {
-		fmt.Println(ReverseSentence(args[1], ReverseString))
+		os.Exit(0)
+	} else if length > 2 {
+		fmt.Println("As this program just process first argument, it will be the only one to be processed...")
 	}
+	fmt.Println(ReverseSentence(args[1], ReverseString))
 }
 
 func main() {
