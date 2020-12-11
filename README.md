@@ -1,2 +1,2 @@
 # sentence-reverser
-Program to reverse words in a givensentence
+Program to reverse words in a given sentence
